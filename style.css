@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/font/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: 400 500 600 700;
+}
+
+:root {
+  --slate-900: #0f172a;
+  --slate-800: #1d293d;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-200: #e2e8f0;
+
+  --teal-400: #46ecd4;
+  --teal-300: #96f7e4;
+
+  /* Color */
+  --bg-primary: var(--slate-900);
+  --bg-accent: rgba(70, 236, 211, 0.1); /* 10% opacity of teal-400 */
+  --bg-accent-hover: rgba(29, 41, 61, 0.5); /* 50% opacity of slate-800 */
+
+  /* Text */
+  --text-primary: var(--slate-200);
+  --text-secondary: var(--slate-400);
+  --text-accent: var(--teal-300);
+  --text-hover: var(--teal-300);
+
+  /* Font Weight */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Font Size */
+  --font-5xl: 3rem; /* 48px */
+  --font-4xl: 2.25rem; /* 36px */
+  --font-xl: 1.25rem; /* 20px */
+  --font-lg: 1.125rem; /* 18px */
+  --font-base: 1rem; /* 16px */
+  --font-sm: 0.875rem; /* 14px */
+  --font-xs: 0.75rem; /* 12px */
+}
