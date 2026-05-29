@@ -41,3 +41,61 @@
   --font-sm: 0.875rem; /* 14px */
   --font-xs: 0.75rem; /* 12px */
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Utility Class */
+.title {
+  font-size: var(--font-4xl);
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: -0.025em;
+  color: var(--slate-200);
+}
+
+.subtitle {
+  font-size: var(--font-lg);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.75rem;
+  color: var(--slate-200);
+}
+
+.section-title {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-200);
+}
+
+.text-primary {
+  font-size: var(--font-base);
+  color: var(--slate-400);
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-5xl);
+    line-height: 1rem;
+  }
+
+  .subtitle {
+    font-size: var(--font-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+}
