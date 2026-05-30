@@ -48,10 +48,15 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
 }
 
 /* Utility Class */
@@ -80,20 +85,137 @@ body {
   color: var(--slate-200);
 }
 
-.text-primary {
+.text-body {
   font-size: var(--font-base);
   color: var(--slate-400);
   line-height: 1.5;
 }
 
+.text-link {
+  font-size: var(--font-base);
+  line-height: 1.5;
+  color: var(--slate-200);
+  font-weight: 500;
+
+  transition: color 300ms ease;
+}
+
+.text-link:hover {
+  color: #5eead4;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  padding: 3rem 1.5rem;
+  min-height: 100dvh;
+  max-width: 100dvh;
+}
+
+/* 
+========================================================================
+  > HEADER
+========================================================================
+*/
+
+/* > HERO */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75rem;
+
+  height: fit-content;
+}
+
+.hero__tagline {
+  max-width: 250px;
+}
+
+/* NAVIGATION */
+.navigation {
+  display: none;
+}
+
+/* SOCIAL MEDIA */
+.social_media {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.75rem;
+
+  width: fit-content;
+
+  margin-top: 2rem;
+
+  position: relative;
+  padding-left: 3.75rem;
+}
+
+.social_media::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 3rem;
+  height: 2px;
+
+  background-color: var(--slate-400);
+}
+
+.social_media__link {
+  position: relative;
+
+  height: fit-content;
+  width: fit-content;
+}
+
+.social_media__icon {
+  fill: var(--slate-400);
+
+  transition: fill 300ms ease;
+}
+
+.social_media__tag {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: var(--font-xs);
+  background-color: rgba(22, 22, 22, 0.5);
+  color: var(--slate-200);
+
+  padding: 0.25rem 0.5rem;
+
+  display: none;
+}
+
+.social_media__link:hover > .social_media__icon {
+  fill: #5eead4;
+}
+
+.social_media__link:hover > .social_media__tag {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .title {
     font-size: var(--font-5xl);
-    line-height: 1rem;
+    line-height: 1;
   }
 
   .subtitle {
     font-size: var(--font-xl);
+  }
+
+  /* HERO */
+  .hero {
+    gap: 1.25rem;
   }
 }
 
